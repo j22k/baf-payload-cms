@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
+import Users from './collections/Users';
 import Events from './collections/Events';
 import Media from './collections/Media';
 import Catalog from './collections/Catalog';
@@ -22,6 +23,7 @@ export default buildConfig({
   }),
   secret: process.env.PAYLOAD_SECRET as string,
   collections: [
+    Users,
     Events,
     Media,
     Brand,
